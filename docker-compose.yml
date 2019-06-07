@@ -1,0 +1,27 @@
+version: "2"
+services:
+  geth-bootnode:
+    hostname: geth-bootnode
+    environment: 
+      - nodekeyhex=08f0e1dee5c1b4645f3331a566009e41a4514b6cd28656d63d0449ecf812812b #Needs to be fix, so that the miners know the resulting enode id
+    build:
+      context: ./bootnode
+    ports: 
+      - 30301:30301/udp
+      - 8545:8545
+      - 5545:5545
+      - 6545:6545
+    networks:
+      chainnet: 
+        ipv4_address: 172.25.0.101 # The miners need to know the IP address later on
+networks:
+  chainnet:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: 172.25.0.0/24
+
+volumes:
+  eth-data-1:
+  eth-data-2:
+  eth-data-3:
