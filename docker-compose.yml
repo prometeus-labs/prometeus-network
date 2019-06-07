@@ -11,17 +11,5 @@ services:
       - 8545:8545
       - 5545:5545
       - 6545:6545
-    networks:
-      chainnet: 
-        ipv4_address: 172.25.0.101 # The miners need to know the IP address later on
-networks:
-  chainnet:
-    driver: bridge
-    ipam:
-      config:
-      - subnet: 172.25.0.0/24
-
 volumes:
   eth-data-1:
-  eth-data-2:
-  eth-data-3:
