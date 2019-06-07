@@ -16,7 +16,7 @@ ADD ./genesis.json ./genesis.json
 RUN mkdir node
 RUN ./geth --datadir ./node init genesis.json
 
-CMD exec ./geth --networkid 199014 --verbosity=4 --rpcport 5545 --rpc --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "admin,db,eth,net,web3,personal,miner,txpool" --datadir ./node --rpccorsdomain "*" --ws --wsport 6545 --wsorigins=* --wsapi db,eth,net,ssh,miner,web3,personal,admin,txpool --rpcvhosts=*
+CMD exec ./geth --networkid 19901437325 --verbosity=4 --rpcport 5545 --rpc --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "admin,db,eth,net,web3,personal,miner,txpool" --datadir ./node --rpccorsdomain "*" --ws --wsport 6545 --wsorigins=* --wsapi db,eth,net,ssh,miner,web3,personal,admin,txpool --rpcvhosts=*
 
 EXPOSE 5545
 EXPOSE 6545

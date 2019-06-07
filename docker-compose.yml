@@ -7,7 +7,7 @@ services:
     build:
       context: ./bootnode
     ports: 
-      - 30301:30301/udp
+      - 30303:30303
       - 8545:8545
       - 5545:5545
       - 6545:6545
